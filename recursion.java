@@ -10,4 +10,16 @@ public class recursion{
       return guess;
     }
   }
+  public static int fib(int n){
+    return fibh(n,1,1);
+  }
+  private static int fibh(int n, int old, int newnum){
+    int temp = old + newnum;
+    if (n == 0){
+      return old;
+    }
+    else{
+      return fibh(n - 1, newnum, temp);
+    }
+  }
 }
