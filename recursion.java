@@ -1,10 +1,13 @@
 import java.util.ArrayList;
 public class recursion{
+  public static void main(String args[]){
+    System.out.println(sqrt(100, 0.01));
+  }
   public static double sqrt(double n, double tolerance){
-    return sqrth(n, tolerance, n / 2);
+    return sqrth(n, tolerance, 1);
   }
   private static double sqrth(double n, double tolerance, double guess){
-    if ((n - guess * guess) / n < tolerance){
+    if (Math.abs((guess * guess - n) / n) > tolerance){
       return sqrth(n, tolerance, (n / guess + guess) / 2);
     }
     else{
@@ -26,6 +29,7 @@ public class recursion{
   public static ArrayList<Integer> makeAllSums(int n){
     ArrayList<Integer> newary = new ArrayList<>();
     sumsh(n, 0, newary);
+    return newary;
   }
   private static void sumsh(int n, int count, ArrayList<Integer> ary){
     if (n == 0){
