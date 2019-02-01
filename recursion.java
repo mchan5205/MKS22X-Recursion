@@ -2,6 +2,7 @@ import java.util.ArrayList;
 public class recursion{
   public static void main(String args[]){
     System.out.println(sqrt(100, 0.01));
+    System.out.println(fib(5));
   }
   public static double sqrt(double n, double tolerance){
     return sqrth(n, tolerance, 1);
@@ -19,7 +20,7 @@ public class recursion{
   }
   private static int fibh(int n, int old, int newnum){
     int temp = old + newnum;
-    if (n == 0){
+    if (n < 2){
       return old;
     }
     else{
