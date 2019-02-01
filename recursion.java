@@ -3,6 +3,7 @@ public class recursion{
   public static void main(String args[]){
     System.out.println(sqrt(100, 0.01));
     System.out.println(fib(5));
+    System.out.println(makeAllSums(3));
   }
   public static double sqrt(double n, double tolerance){
     return sqrth(n, tolerance, 1);
