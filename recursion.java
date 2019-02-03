@@ -2,6 +2,8 @@ import java.util.ArrayList;
 public class recursion{
   public static void main(String args[]){
     System.out.println(sqrt(100, 0.01));
+    System.out.println(fib(0));
+    System.out.println(fib(1));
     System.out.println(fib(5));
     System.out.println(makeAllSums(3));
   }
@@ -17,11 +19,11 @@ public class recursion{
     }
   }
   public static int fib(int n){
-    return fibh(n,1,1);
+    return fibh(n,0,1);
   }
   private static int fibh(int n, int old, int newnum){
     int temp = old + newnum;
-    if (n < 2){
+    if (n == 0){
       return old;
     }
     else{
